@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+int power;
+char colour; 
+printf("Is the power on? (Type 1 for on and 0 for off)\n");
+scanf("%d",&power);
+if(power==1){
+    printf("Is the light Red (R), Yellow (Y) or Green(G)?\n");
+    scanf(" %c",&colour);
+    if(colour=='R'||colour=='r'){
+        printf("Stop\n");
+    }
+    else if(colour=='Y'|| colour=='y'){
+        printf("Caution\n");
+    }
+    else if(colour=='G'||colour=='g'){
+        printf("Go");
+    }
+    else{
+        printf("Enter a valid character\n");
+    }
+}
+else{
+        printf("Signal Off\n");
+    }
+    return 0; 
+}
