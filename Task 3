@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    int a,b,c;
+    int det;
+    printf("From the quadratic equation ax^2+bx+c input a, b and c respectively: \n");
+    scanf("%d %d %d",&a,&b,&c);
+    det=((b*b)-(4*a*c));
+    if(det==0){
+        printf("One real root\n");
+    }
+    else if(det>0){
+        printf("Two real roots\n");
+    }
+    else if(det<0){
+        printf("No real roots\n");
+    }
+    return 0;
+}
