@@ -1,0 +1,23 @@
+#include<stdio.h> 
+#include<string.h>
+int main(){
+    char user[30],pass[30];
+    char user_n[30]="user1234";
+    char pass_n[30]="user5678";
+    printf("Enter your username: \n");
+    scanf("%s",user);
+    if (strcmp(user_n,user)==0){
+       printf("Enter your passcode: \n");
+       scanf("%s",pass);
+    if(strcmp(pass_n,pass)==){
+       printf("You are logged in \n");
+    }
+    else{
+        printf("Enter a valid passcode \n");
+    }
+    }
+    else{
+        printf("Username not found \n");
+    }
+    return 0;
+    }
