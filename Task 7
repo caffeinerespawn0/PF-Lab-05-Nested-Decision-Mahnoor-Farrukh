@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+    int permission;
+    printf("Enter permission value(1=READ,2=WRITE,4=EXECUTE)Add them for multiple permissions\n");
+    scanf("%d",&permission);
+    if(permission&4){
+        printf("Access granted: full control\n");
+    }
+    else{
+        if((permission&1)&&(permission&2)){
+            printf("Access granted: read and write\n");
+        }
+        else {
+            if(permission&1){
+            printf("Access granted: read-only\n");
+            }
+        else{
+            printf("Access Denied\n");
+        }
+        }
+     }
+      return 0;
+    }
+  
