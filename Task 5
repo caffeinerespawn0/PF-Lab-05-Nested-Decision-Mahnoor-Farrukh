@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int pre_req, course;
+
+    printf("Are your Pre-requisite completed? (1 for yes, 0 for no): ");
+    scanf("%d", &pre_req);
+
+    printf("Is the course full? (1 for yes, 0 for no): ");
+    scanf("%d", &course);
+
+    if (pre_req == 1 && course == 0) {
+        printf("Enrolled successfully\n");
+    }
+    else if (pre_req == 0 && course == 0) {
+        printf("Cannot enroll: prerequisite missing\n");
+    }
+    else if (pre_req == 1 && course == 1) {
+        printf("Cannot enroll: course is full\n");
+    }
+    else { 
+        printf("Cannot enroll: prerequisite missing and course is full\n");
+    }
+
+    return 0;
+}
