@@ -1,33 +1,52 @@
-#include<stdio.h>
-int main(){
-    char room,action; 
-printf("Which room do you want to control?Living room(L) or Kitchen (K) \n");
-scanf(" %c",&room);
-if(room=='L' || room=='l'){
-    printf("Do you want to control Lights (L) or Thermostat (T)");
-    scanf(" %c",&action);
-    if(action=='L' || action=='l'){
-        printf("Adjusting ambient lighting\n");
+#include <stdio.h>
+
+int main() {
+    char room, action; 
+
+    printf("Which room do you want to control? Living room (L) or Kitchen (K): ");
+    scanf(" %c", &room);
+
+    switch(room) {
+        case 'L':
+        case 'l':
+            printf("Do you want to control Lights (L) or Thermostat (T): ");
+            scanf(" %c", &action);
+            switch(action) {
+                case 'L':
+                case 'l':
+                    printf("Adjusting ambient lighting\n");
+                    break;
+                case 'T':
+                case 't':
+                    printf("Setting living room temperature\n");
+                    break;
+                default:
+                    printf("Enter a valid character\n");
+            }
+            break;
+
+        case 'K':
+        case 'k':
+            printf("Do you want to control Lights (L) or Thermostat (T): ");
+            scanf(" %c", &action);
+            switch(action) {
+                case 'L':
+                case 'l':
+                    printf("Turning on bright task lighting\n");
+                    break;
+                case 'T':
+                case 't':
+                    printf("Setting kitchen temperature\n");
+                    break;
+                default:
+                    printf("Enter a valid character\n");
+            }
+            break;
+
+        default:
+            printf("Enter a valid room character\n");
     }
-    else if(action=='T'||action=='t'){
-        printf("Setting living room temperature\n");
-    }
-    else{
-        printf("Enter a valid character\n");
-    }
+
+    return 0;
 }
-if(room=='K'||room=='k'){
-    printf("Do you want to control Lights (L) or Thermostat (T)");
-    scanf(" %c",&action);
-    if(action=='L'||action=='l'){
-        printf("Turning on bright task lighting\n");
-    }
-    else if(action=='T'||action=='t'){
-        printf("Setting kitchen temperature.\n");
-    }
-    else{
-        printf("Enter a valid character \n");
-    }
-}
-return 0; 
-}
+
